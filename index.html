@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Origo - Where Business Begins</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Caveat&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #FFF8E7;
+    }
+
+    /* ---- Hero section ---- */
+    .hero {
+        position: relative;
+        background-image: url('hero-bg.jpg.jpe');
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+    }
+
+    .hero-card {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        background-color: #F4E9C9;
+        padding: 30px;
+        max-width: 340px;
+        border-radius: 6px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .hero-card h1 {
+        color: #1B3A5C;
+        font-size: 28px;
+        margin: 0 0 12px 0;
+        line-height: 1.2;
+    }
+
+    .hero-card h1 em {
+        font-style: italic;
+        color: #3B6EA5;
+    }
+
+    .hero-card p {
+        color: #444;
+        font-size: 14px;
+        margin: 0 0 20px 0;
+    }
+
+    .waitlist-form {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border: #1B3A5C 1px solid;
+        border-radius: 50px;
+        padding: 4px 4px 4px 16px;
+        max-width: 320px;
+    }
+
+    .waitlist-form input {
+        border: none;
+        outline: none;
+        font-size: 14px;
+        flex: 1;
+        padding: 10px 0;
+    }
+
+    .waitlist-form button {
+        background-color: #1B3A5C;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    /* ---- Statement section ---- */
+    .statement {
+        background-color: #1B3A5C;
+        color: #F4E9C9;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .statement h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 60px;
+        font-weight: 600;
+        max-width: 700px;
+        margin: 0 auto 20px auto;
+        line-height: 1.25;
+    }
+
+    .statement h2 em {
+        font-style: italic;
+        color: #F2C14E;
+    }
+
+    .statement p {
+        max-width: 500px;
+        margin: 0 auto;
+        color: #C9D6E8;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .headline-wrap {
+        position: relative;
+        display: inline-block;
+        max-width: 700px;
+        margin-bottom: 40px;
+    }
+
+    .pill {
+        position: absolute;
+        border: 1px solid #F2C14E;
+        color: #F2C14E;
+        border-radius: 20px;
+        padding: 6px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+        background-color: #1B3A5C;
+    }
+
+    .pill-1 { top: -25px; left: -20px; }
+    .pill-2 { top: 90px; left: -40px; }
+    .pill-3 { top: -25px; right: -20px; }
+    .pill-4 { top: 90px; right: -40px; }
+    .pill-5 {
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-top: 60px;
+        flex-wrap: wrap;
+    }
+
+    .feature {
+        max-width: 200px;
+        text-align: center;
+    }
+
+    .icon-svg {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 10px;
+    }
+
+    .feature h3 {
+        font-size: 15px;
+        color: #F2C14E;
+        margin: 0 0 8px 0;
+    }
+
+    .feature p {
+        font-size: 13px;
+        color: #C9D6E8;
+        margin: 0;
+    }
+
+    /* ---- Comparison section ---- */
+    .compare-wrap {
+        display: flex;
+        min-height: 500px;
+    }
+
+    .compare-side-left {
+        flex: 1;
+        background-image: url('compare-left.jpe');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .compare-side-right {
+        flex: 1;
+        background-image: url('compare-right.jpe');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .compare {
+        flex: 2;
+        background-color: #F2C14E;
+        padding: 60px 40px;
+        text-align: center;
+    }
+
+    .compare h2 {
+        font-family: 'Playfair Display', serif;
+        color: #1B3A5C;
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .compare table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .compare th, .compare td {
+        padding: 16px;
+        text-align: left;
+        border-bottom: 1px solid #1B3A5C;
+    }
+
+    .compare th {
+        color: #1B3A5C;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .compare td:first-child {
+        color: #1B3A5C;
+        font-size: 14px;
+    }
+
+    .compare td.highlight {
+        color: #1B3A5C;
+        font-weight: bold;
+    }
+
+    /* ---- Contact section ---- */
+    .contact {
+        background-color: #1B3A5C;
+        text-align: center;
+        padding: 100px 20px 60px 20px;
+    }
+
+    .contact h2 {
+        font-family: 'Playfair Display', serif;
+        color: #FFF8E7;
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .contact p {
+        color: #C9D6E8;
+        max-width: 400px;
+        margin: 0 auto 30px auto;
+        font-size: 15px;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        font-size: 14px;
+    }
+
+    .contact-links a {
+        color: #F2C14E;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .footer-note {
+        text-align: center;
+        padding: 20px;
+        color: #444;
+        font-size: 12px;
+        background-color: #FFF8E7;
+    }
+</style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-card">
+            <h1>Where <em>business</em> begins</h1>
+            <p>Origo makes starting your online business simple and affordable — no expensive tools, no overwhelm, just a place to begin.</p>
+            <form class="waitlist-form">
+                <input type="email" placeholder="you@email.com" required>
+                <button type="submit">→</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="statement">
+        <div class="headline-wrap">
+            <div class="pill pill-1">+ TEMPLATES</div>
+            <div class="pill pill-2">+ SUBDOMAIN</div>
+            <div class="pill pill-3">+ AI TOOLS</div>
+            <div class="pill pill-4">+ AFFORDABLE</div>
+            <div class="pill pill-5">+ GROWTH</div>
+            <h2>This is the start of your <em>next era.</em></h2>
+        </div>
+
+        <p>Origo gives first-time entrepreneurs everything they need to launch — without the cost or complexity of traditional platforms.</p>
+
+        <div class="features">
+            <div class="feature">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="#F2C14E" stroke-width="1.5">
+                    <path d="M6 3l6 14 2-6 6-2z" fill="#F2C14E"/>
+                </svg>
+                <h3>Easy Templates</h3>
+                <p>Pick a design and make it yours in minutes, no experience needed.</p>
+            </div>
+            <div class="feature">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="#F2C14E" stroke-width="1.5">
+                    <path d="M4 9l1-5h14l1 5"/>
+                    <path d="M4 9a2 2 0 004 0 2 2 0 004 0 2 2 0 004 0 2 2 0 004 0"/>
+                    <path d="M5 9v10h14V9"/>
+                    <path d="M10 19v-6h4v6"/>
+                </svg>
+                <h3>Instant Subdomain</h3>
+                <p>Get online fast with a free storename.origo.com address.</p>
+            </div>
+            <div class="feature">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="#F2C14E" stroke="none">
+                    <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/>
+                </svg>
+                <h3>AI-Powered Help</h3>
+                <p>Get guidance on planning, marketing, and growing your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="compare-wrap">
+        <div class="compare-side-left"></div>
+        <section class="compare">
+            <h2>Why Origo?</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Competitors</th>
+                    <th>Origo</th>
+                </tr>
+                <tr>
+                    <td>Monthly fee</td>
+                    <td>$5–$2,300/mo</td>
+                    <td class="highlight">$3–$10/mo</td>
+                </tr>
+                <tr>
+                    <td>Inventory management</td>
+                    <td>Complex database systems</td>
+                    <td class="highlight">Database + AI bots to summarize it for you</td>
+                </tr>
+                <tr>
+                    <td>Transaction fees</td>
+                    <td>Yes — 2.9% + 30¢, even on lowest plan</td>
+                    <td class="highlight">None. Your profit is your profit.</td>
+                </tr>
+                <tr>
+                    <td>Theme customization</td>
+                    <td>Drag-and-drop requires a higher tier</td>
+                    <td class="highlight">Drag-and-drop + AI design help, lowest tier</td>
+                </tr>
+                <tr>
+                    <td>Included tools</td>
+                    <td>1 AI assistant, image studio — more requires paid apps/upgrades</td>
+                    <td class="highlight">AI website editor, budgeting assistant, image generator & editor — all on lowest tier</td>
+                </tr>
+            </table>
+        </section>
+        <div class="compare-side-right"></div>
+    </div>
+
+    <section class="contact">
+        <h2>Let's build something together.</h2>
+        <p>Have questions, ideas, or just want to say hi? We'd love to hear from you.</p>
+        <div class="contact-links">
+            <a href="mailto:caroline.boudreau0071@gmail.com">Email</a>
+            <a href="https://www.instagram.com/origo_your_new_era?igsh=MXhyaWRxNnUyejdweQ==">Instagram</a>
+            <a href="https://www.tiktok.com/@origo_your_new_era?_r=1&_t=ZT-9815AYJtHll">TikTok</a>
+        </div>
+    </section>
+    <div class="footer-note">© 2026 Origo. All rights reserved.</div>
+
+</body>
+</html>
